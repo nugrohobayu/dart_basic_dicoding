@@ -1,26 +1,26 @@
 void main() {
-  callingMap();
-  keyValueUsed();
-  addMap();
+  // callingMap(); // menampilkan isi map
+  // keyValueUsed(); // menampilkan key dan value saja
+  addMap(); // menambahkan isi map
 
   /// MAP digunakan untuk menyimpan banyak data dengan pasangan KEY-VALUE
 }
 
 void callingMap() {
-  Map capital = {
+  Map<String, dynamic> capital = {
     "Jakarta": "Indonesia",
     "London": "Inggris",
-    "Tokyo": "Jepang"
+    "Tokyo": "Jepang",
   };
 
   print(capital["London"]);
 }
 
 void keyValueUsed() {
-  Map capital = {
+  Map<String, dynamic> capital = {
     "Jakarta": "Indonesia",
     "London": "Inggris",
-    "Tokyo": "Jepang"
+    "Tokyo": "Jepang",
   };
 
   var mapKeys = capital.keys;
@@ -33,7 +33,7 @@ void addMap() {
   Map capital = {
     "Jakarta": "Indonesia",
     "London": "Inggris",
-    "Tokyo": "Jepang"
+    "Tokyo": "Jepang",
   };
 
   capital["Kuala Lumpur"] = "Malaysia";
