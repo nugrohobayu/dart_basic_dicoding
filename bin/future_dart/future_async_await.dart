@@ -1,17 +1,20 @@
 void main() async {
   print("First run"); // dijalankan pertama
-  var order = await getOrder();
-  print("Orderan kamu : $order"); //
+  await getOrder(true).then((value) {
+    print("Orderan kamu : $value"); //
+  }).catchError((error) {
+    print("Errornya $error");
+  });
+  print("Last run wait for async await"); // dijalankan pertama
 }
 
 num product(int firstNumber, double secondNumber) {
   return firstNumber * secondNumber;
 }
 
-Future<String> getOrder() {
+Future<String> getOrder(bool isStockAvailable) {
   //Ini Future Uncompleted karena belum dipangil di method manapun
   return Future.delayed(Duration(seconds: 1), () {
-    var isStockAvailable = true;
     if (isStockAvailable) {
       return 'Coffee Boba';
     } else {
